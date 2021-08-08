@@ -2,6 +2,15 @@
 
 Scraper for getting data of Japanese "empty houses" Akiya.
 
+![Screenshot of mobile version](./screenshot.png)
+
+## functionality
+
+As of now the site is hosted on [http://akiya.surge.sh](http://akiya.surge.sh) and lists only some entries in Nagano from [nagano-akiyabank.jp](http://nagano-akiyabank.jp).
+
+It can only be run in http since the Nagano Akiyabank only runs on http, giving ssl cert issues on loading images on https.
+
+It lists the entries with address, price, top three images and linking to the original entry.
 
 ## run
 

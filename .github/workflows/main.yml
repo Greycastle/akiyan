@@ -28,14 +28,13 @@ jobs:
         with:
           node-version: '14'
 
+      # env
+      env:
+        SURGE_LOGIN=ddikman@gmail.com
+      
       # Runs a single command using the runners shell
       - name: Get surge
         run: npm install --global surge
-
-      - name: Login
-        run: |
-          SURGE_LOGIN=ddikman@gmail.com
-          SURGE_TOKEN=$SURGE_TOKEN
 
       # Runs a set of commands using the runners shell
       - name: Deploy

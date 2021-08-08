@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: '14'
 
-      # env
+      # Setup env
       env:
         SURGE_LOGIN=ddikman@gmail.com
       

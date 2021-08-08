@@ -22,6 +22,7 @@ jobs:
 
     env:
       SURGE_LOGIN: ddikman@gmail.com
+      SURGE_TOKEN: '${{ secrets.SURGE_TOKEN }}'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

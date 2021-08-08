@@ -12,7 +12,7 @@ export GMAPS_API_KEY=...
 
 ```shell
 pipenv install
-pipenv run scrapy runspider nagano.py -o nagano.csv
+pipenv run scrapy runspider scraper/nagano.py -o web/nagano.json
 ```
 
 ## debugging

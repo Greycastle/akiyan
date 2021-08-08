@@ -24,12 +24,14 @@ class NaganoSpider(scrapy.Spider):
             location_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={parse.quote(location_raw)}&key={api_key}"
             location_data = json.load(urlopen(location_url))['results'][0]
             coordinates = location_data['geometry']['location']
+            url = "http://nagano-akiyabank.jp" + item.css('h3 a::attr(href)').get()
 
             yield {
                 "locationRaw": location_raw,
                 "longitude": coordinates['lng'],
                 "latitude": coordinates['lat'],
-                "prize": price,
+                "price": price,
+                "url": url,
                 "image1": images[0],
                 "image2": images[1],
                 "image3": images[2],

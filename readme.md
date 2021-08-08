@@ -32,6 +32,10 @@ It's easiest to simply grab the url and run it in Scrapy shell:
 pipenv run scrapy shell http://nagano-akiyabank.jp/search/
 ```
 
+## API key
+
+Needs to have privileges to the Google Maps API. The one coded in the html is restricted to only be used from surge.
+
 ## publish
 
 ```

@@ -22,3 +22,10 @@ It's easiest to simply grab the url and run it in Scrapy shell:
 ```shell
 pipenv run scrapy shell http://nagano-akiyabank.jp/search/
 ```
+
+## publish
+
+```
+npm install --global surge
+surge ./web akiya.surge.sh
+```

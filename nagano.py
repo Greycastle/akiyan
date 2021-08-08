@@ -19,19 +19,19 @@ class NaganoSpider(scrapy.Spider):
         for item in response.css('.rakuenakiyaBukken'):
             images = item.css('.photoBox img::attr(src)').getall()
             price = int(float(item.css('.price .num::text').get()) * 10000)
-            location = item.css('h3 a::text').get()
+            location_raw = item.css('h3 a::text').get()
+
+            location_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={parse.quote(location_raw)}&key={api_key}"
+            location_data = json.load(urlopen(location_url))['results'][0]
+            coordinates = location_data['geometry']['location']
+
             yield {
-                "location": location,
+                "locationRaw": location_raw,
+                "longitude": coordinates['lng'],
+                "latitude": coordinates['lat'],
                 "prize": price,
                 "image1": images[0],
                 "image2": images[1],
                 "image3": images[2],
             }
-            print(f"https://maps.googleapis.com/maps/api/geocode/json?address={parse.quote(location)}&key={api_key}")
-
-
-# https://maps.googleapis.com/maps/api/geocode/json?address
-
-# https://maps.googleapis.com/maps/api/geocode/json?address=長野市信州新町日原東1644-1
-
-# def read_address():
+            

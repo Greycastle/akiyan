@@ -12,7 +12,7 @@ It can only be run in http since the Nagano Akiyabank only runs on http, giving 
 
 It lists the entries with address, price, top three images and linking to the original entry.
 
-## run
+## running scraper
 
 First set your API key for Google Maps lookup:
 ```
@@ -24,7 +24,7 @@ pipenv install
 pipenv run scrapy runspider scraper/nagano.py -o web/nagano.json
 ```
 
-## debugging
+### debugging
 
 It's easiest to simply grab the url and run it in Scrapy shell:
 

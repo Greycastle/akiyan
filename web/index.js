@@ -1,7 +1,11 @@
 let map;
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), { zoom: 8});
+  map = new google.maps.Map(document.getElementById("map"), { 
+    zoom: 8,
+    styles: mapStyle,
+    mapTypeControl: false
+  });
 
 
   const infoWindow = new google.maps.InfoWindow();

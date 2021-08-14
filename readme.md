@@ -36,6 +36,12 @@ pipenv run scrapy shell http://nagano-akiyabank.jp/search/
 
 Needs to have privileges to the Google Maps API. The one coded in the html is restricted to only be used from surge.
 
+## Running locally
+
+To run this locally, you will need to ensure you have a google maps API key that works for your local device.
+
+I'll fix this somehow one day.
+
 ## publish
 
 ```
